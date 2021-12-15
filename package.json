@@ -1,0 +1,20 @@
+{
+  "name": "scratchpayfinance",
+  "version": "1.0.0",
+  "description": "First Assessment and Challenge",
+  "main": "index.js",
+  "author": "victor <nwaguvictor100@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "jest": "^27.4.5",
+    "underscore": "^1.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
