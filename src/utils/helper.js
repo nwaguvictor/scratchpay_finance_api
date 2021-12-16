@@ -3,7 +3,7 @@
 const _ = require('underscore');
 const axios = require('axios').default;
 
-exports.findMany = (query = {}, items = []) => {
+const findMany = (query = {}, items = []) => {
   if (_.isEmpty(query)) return items;
 
   let { name, state, availability } = query;
@@ -24,7 +24,7 @@ exports.findMany = (query = {}, items = []) => {
   });
 };
 
-exports.fetchClinics = async url => {
+const fetchClinics = async url => {
   const response = await axios.get(url);
   return response.data;
 };
@@ -39,3 +39,9 @@ function getItemByAvailability(item = {}, availability = '') {
     (item.opening?.from === from && item.opening?.to === to)
   );
 }
+
+module.exports = {
+  getItemByAvailability,
+  fetchClinics,
+  findMany,
+};
