@@ -2,7 +2,7 @@
 
 const http = require('http');
 const url = require('url');
-const { fetchClinics, findMany } = require('./utils/helper');
+const { fetchData, findMany } = require('./utils/helper');
 
 // End points for clinics
 const dentalUrl = 'https://storage.googleapis.com/scratchpay-code-challenge/dental-clinics.json';
@@ -14,8 +14,8 @@ const server = http.createServer(async (req, res) => {
   // Routing
   if (pathname == '/scratchpay/clinics' && req.method == 'GET') {
     try {
-      const vets = await fetchClinics(vetUrl);
-      const dentals = await fetchClinics(dentalUrl);
+      const vets = await fetchData(vetUrl);
+      const dentals = await fetchData(dentalUrl);
 
       let clinics = findMany(query, [...vets, ...dentals]);
 

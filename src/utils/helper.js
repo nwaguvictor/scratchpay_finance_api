@@ -24,7 +24,7 @@ const findMany = (query = {}, items = []) => {
   });
 };
 
-const fetchClinics = async url => {
+const fetchData = async url => {
   const response = await axios.get(url);
   return response.data;
 };
@@ -42,6 +42,6 @@ function getItemByAvailability(item = {}, availability = '') {
 
 module.exports = {
   getItemByAvailability,
-  fetchClinics,
+  fetchData,
   findMany,
 };
