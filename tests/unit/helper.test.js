@@ -1,6 +1,6 @@
 'use strict';
 
-const { getItemByAvailability, findMany } = require('../src/utils/helper');
+const { getItemByAvailability, findMany } = require('../../src/utils/helper');
 
 describe('Helper Mathods', () => {
   describe('getItemByAvailability', () => {

@@ -34,3 +34,5 @@ const server = http.createServer(async (req, res) => {
 
 const PORT = 3000;
 server.listen(PORT, () => console.log(`::> Application running on http://127.0.0.1:${PORT}`));
+
+module.exports = server;
