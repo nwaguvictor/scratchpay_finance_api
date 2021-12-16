@@ -1,6 +1,6 @@
 ## Assumptions
 
-- [*] to make the search query ooptions, i have chosen
+- [x] to make the search query ooptions, i have chosen
 
 - name: representing clinics with name and clinicName
 - state: to represent stateCode and stateName
